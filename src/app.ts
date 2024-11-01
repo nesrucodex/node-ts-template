@@ -14,8 +14,9 @@ app.use(express.json());
 app.use(middlewares.limiter);
 
 // Registring routes
-
 app.use(routes.helloRouter);
+
+// Route error handling middleware
 app.use(middlewares.routeErrorHandlingMiddleware);
 
 export default app;

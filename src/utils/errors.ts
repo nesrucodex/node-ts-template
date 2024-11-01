@@ -1,7 +1,8 @@
+import { StatusCodes } from "http-status-codes";
 export class BadRequest extends Error {
   constructor(
     message: string,
-    public statusCode = 400,
+    public statusCode = StatusCodes.BAD_REQUEST,
     public result: any = null
   ) {
     super(message);
@@ -14,7 +15,7 @@ export class BadRequest extends Error {
 export class Unauthorized extends Error {
   constructor(
     message: string,
-    public statusCode = 401,
+    public statusCode = StatusCodes.UNAUTHORIZED,
     public result: any = null
   ) {
     super(message);
@@ -27,7 +28,7 @@ export class Unauthorized extends Error {
 export class Forbidden extends Error {
   constructor(
     message: string,
-    public statusCode = 403,
+    public statusCode = StatusCodes.FORBIDDEN,
     public result: any = null
   ) {
     super(message);
@@ -40,7 +41,7 @@ export class Forbidden extends Error {
 export class NotFound extends Error {
   constructor(
     message: string,
-    public statusCode = 404,
+    public statusCode = StatusCodes.NOT_FOUND,
     public result: any = null
   ) {
     super(message);
@@ -53,7 +54,7 @@ export class NotFound extends Error {
 export class InternalServerError extends Error {
   constructor(
     message: string,
-    public statusCode = 500,
+    public statusCode = StatusCodes.INTERNAL_SERVER_ERROR,
     public result: any = null
   ) {
     super(message);

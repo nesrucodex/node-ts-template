@@ -12,4 +12,5 @@
     "skipLibCheck": true,
     "sourceMap": true
   }
+  // "include": ["./src/**/*"]
 }
